@@ -1,43 +1,33 @@
 package com.example.kotlin_lab
 
 import android.os.Bundle
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.kotlin_lab.ui.theme.Kotlin_LabTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Kotlin_LabTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                }
-            }
-        }
+        setContentView(R.layout.activity_main)
+
+        val greetingTextView = findViewById<TextView>(R.id.greetingTextView)
+        greetingTextView.text = getString(R.string.hello_android)
+
+        Toast.makeText(this, "onCreate()", Toast.LENGTH_LONG).show()
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-            text = "Hello $name!",
-            modifier = modifier
-    )
-}
+    override fun onPause() {
+        Toast.makeText(this, "onPause()", Toast.LENGTH_LONG).show()
+        super.onPause()
+    }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Kotlin_LabTheme {
-        Greeting("Android")
+    override fun onRestart() {
+        super.onRestart()
+        Toast.makeText(this, "onRestart()", Toast.LENGTH_LONG).show()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Toast.makeText(this, "onStart()", Toast.LENGTH_LONG).show()
     }
 }
