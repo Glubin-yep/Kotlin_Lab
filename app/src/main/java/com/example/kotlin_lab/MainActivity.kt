@@ -1,6 +1,8 @@
 package com.example.kotlin_lab
 
 import android.os.Bundle
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,29 +17,11 @@ import com.example.kotlin_lab.ui.theme.Kotlin_LabTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Kotlin_LabTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                }
-            }
-        }
-    }
-}
+        setContentView(R.layout.main)
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-            text = "Hello $name!",
-            modifier = modifier
-    )
-}
+        val ship = findViewById<ImageView>(R.id.shipView)
+        val shipAnim = AnimationUtils.loadAnimation(this, R.anim.ship_anim)
+        ship.startAnimation(shipAnim)
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Kotlin_LabTheme {
-        Greeting("Android")
     }
 }
