@@ -2,61 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_margin="15dp"
     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="Вибиріть станцію" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/smile_button"
-        android:onClick="onButtonClicked"
-        android:padding="10dp" />
-
-    <CheckBox
-        android:id="@+id/checkbox"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onCheckboxClicked"
-        android:text="Вибери мене" />
-
-    <ToggleButton
-        android:id="@+id/togglebutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="onToggleClicked"
-        android:textOff="Дзвінок виключений"
-        android:textOn="Дзвінок включений" />
-    <RadioGroup
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
-        <RadioButton
-            android:id="@+id/radio_dog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Собачка" />
-        <RadioButton
-            android:id="@+id/radio_cat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Котик" />
-        <RadioButton
-            android:id="@+id/radio_rabbit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="onRadioButtonClicked"
-            android:text="Зайчик" />
-    </RadioGroup>
-    <EditText
-    android:id="@+id/user_name"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:hint="Введіть ім’я"/>
-    <Button
-        android:id="@+id/clear_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Очистити"  android:onClick="onClearButtonClicked"  />
+        android:text="Button"
+        android:onClick="onButtonClicked"/>
 </LinearLayout>
