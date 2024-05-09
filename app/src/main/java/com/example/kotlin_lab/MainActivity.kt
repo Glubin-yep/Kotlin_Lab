@@ -10,13 +10,13 @@ import java.util.Locale
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.main)
 
-        val flagLayout = findViewById<LinearLayout>(R.id.flag_layout)
+        //val flagLayout = findViewById<LinearLayout>(R.id.flag_layout)
         val deviceLanguage = Locale.getDefault().language
 
-        if (deviceLanguage == "fr") {
-            layoutInflater.inflate(R.layout.france_flag, flagLayout)
-        }
+       // if (deviceLanguage == "fr") {
+       //     layoutInflater.inflate(R.layout.france_flag, flagLayout)
+        //}
     }
 }

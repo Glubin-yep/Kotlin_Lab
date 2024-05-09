@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">Kotlin_Lab</string>
-    <string name="hello_android">Hello Android!</string>
+    <string name="label_text"> Введіть текст:</string>
+    <string name="entry_hint"> Поле введення</string>
+    <string name="app_name">RelativeLayoutSample</string>
 </resources>
