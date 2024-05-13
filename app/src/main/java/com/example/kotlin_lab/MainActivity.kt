@@ -1,5 +1,6 @@
 package com.example.kotlin_lab
 
+import android.app.Activity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
@@ -14,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.kotlin_lab.ui.theme.Kotlin_LabTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
