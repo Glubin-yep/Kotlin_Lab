@@ -8,7 +8,7 @@
         android:id="@+id/button"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/smile_button"
+        android:background="@mipmap/lander_plain_foreground"
         android:onClick="onButtonClicked"
         android:padding="10dp" />
 
